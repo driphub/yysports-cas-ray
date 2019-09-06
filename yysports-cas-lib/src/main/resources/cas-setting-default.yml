@@ -1,0 +1,10 @@
+system:
+  cas:
+    serverUrl: 'https://logint.pousheng.com'
+    loginUrl: '${system.cas.serverUrl}/login'
+    logoutUrl: '${system.cas.serverUrl}/logout'
+    cookieSessionId: yysportsCasSid   
+    restServer: 'http://10.0.0.168:9003/yysports-cas-service'
+    cookieDomain: manager.yy-sports.com
+    cookiePath: /
+    expiredTime: 1800
