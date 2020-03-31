@@ -1,0 +1,193 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index">健身卡管理</a></li>
+            <li class="breadcrumb-item active" aria-current="page">健身卡列表</li>
+        </ol>
+    </nav>
+</div>
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+    <div class="component-body">
+        <div class="rule-content">
+            <form class="form rule-config" novalidate="true">
+
+                <div class="rule-config-line">
+                    <div class="rule-block rule-All-block">
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>健身卡名稱：</label>
+                            <label class="middle-input left" type="text" name="name" placeholder="請填寫健身卡名稱" ></label>
+                            <span class="red"></span>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>類型：</label>
+                            <div >
+                                <label name="type"></label>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>銷售有限期：</label>
+                            <div class="">
+                                <label  name="sellExpiry"></label>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+
+
+                        <div class="gymcardType-timeCard" style="display: block;">
+                            <div class="rule-bar">
+                                <label class="left" for=""><span class="red">*</span>價格：</label>
+                                <label class="middle-input left" type="text" name="price"></label>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="rule-bar">
+                                <label class="left" for=""><span class="red">*</span>卡使用有限期：</label>
+                                <div>
+                                    <label name="useExpiry">
+                                       
+                                    </label>
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                            <div class="rule-bar">
+                                <label class="left" for=""><span class="red">*</span>限制配置：</label>
+                                <input type="checkbox" ID='timeCard_chb1' disabled="disabled">
+                                <div class="select setwidth">
+                                    <select id='timeCard_sel1' disabled="disabled">
+                                        <option value="month_unlimit">每月</option>
+                                        <option value="season_unlimit">每季</option>
+                                    </select>
+                                </div>
+                                <label class="left" for="">內無次數限制約課</label>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="rule-bar">
+                                <label class="left" for="">&nbsp;</label>
+                                <input type="checkbox" ID='timeCard_chb2' disabled="disabled">
+                                <div class="select setwidth">
+                                    <select id='timeCard_sel2'  disabled="disabled">
+                                        <option value="month_limit">每月</option>
+                                        <option value="season_limit">每季</option>
+                                    </select>
+                                </div>
+                                <label class="left" for="">內限制約高價課 </label> <input type="input" class="highPriceNumber"
+                                    placeholder="輸入" disabled="disabled" value="1"
+                                    style="background-color: #ebebeb;"  />節
+                                <div class="clear"></div>
+                            </div>
+                            <div class="rule-bar">
+                                <label class="left" for="">&nbsp;</label>
+                                <input type="checkbox" ID='timeCard_chb3' disabled="disabled">
+                                <label class="left" for="">限制每個會員限購張數</label><input type="input" class="VIPnumber"
+                                    placeholder="輸入" disabled="disabled"
+                                    style="background-color: #ebebeb;"  />張
+                                <div class="clear"></div>
+                            </div>
+                            <div class="rule-bar">
+                                <label class="left" for=""><span class="red">*</span>購買協議：</label>
+                                <label type="radio" class="radio" id="radioA" name="activateAtSell" ></label>
+                                
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="gymcardType-NumberCard" style="display: none;">
+                            <div class="rule-bar">
+                                <label class="left" for="" ><span class="red">*</span>價格：</label>
+                                <label class="middle-input left" type="text" name="price" maxlength="8"></label>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="rule-bar">
+                                <label class="left" for=""><span class="red">*</span>總課次：</label>
+                                <label class="middle-input left" type="text" name="totalClassTime" placeholder="請輸入總課次"
+                                    maxlength="4"
+                                ></label>
+
+                                <div class="clear"></div>
+                            </div>
+                            <div class="rule-bar">
+                                <label class="left" for=""><span class="red">*</span>限制配置：</label>
+                                <input type="checkbox">
+                                <label class="left" for="">限制每個會員限購張數</label><input type="input" class="VIPnumber"
+                                    placeholder="輸入" maxlength="4"
+                                    disabled="disabled"
+                                    style="background-color: #ebebeb;" />張
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        <div class="gymcardType-ExperienceCard" style="display: none;">
+                            <div class="rule-bar">
+                                <label class="left" for=""><span class="red"></span>自定義價格：</label>
+                                <label class="middle-input left" type="text" name="price" ></label>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="rule-bar">
+                                <label class="left" for=""><span class="red">*</span>限制配置：</label>
+                                <input type="checkbox" disabled="disabled">
+                                <label class="left" for="">限制每個會員限購張數</label><input type="input" class="VIPnumber"
+                                    placeholder="輸入" maxlength="4" disabled="disabled"
+                                    style="background-color: #ebebeb;"/>張
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                        {{!-- <div class="rule-bar" id="row-card">
+                            <label class="left" for=""><span class="red"></span>綁定課程：</label>
+                            <a class="btn btn-primary create-group" href="javascript:void(0);" id="selCoure"
+                                onclick="show_pop();">選擇綁課</a>
+                            <label class="lab_course" id="Lb-course"></label>
+                            <div class="clear"></div>
+                        </div> --}}
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>服務條款：</label>
+                            
+                            <label type="radio" class="radio" id="radioB" name="serviceInfoEnabled" ></label>
+                            <div class="clear"></div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <div class="rule-bar server" style="margin-left: 118px;">
+                        <label class="left" for="">條款內容：</label>
+                        <label  name="serviceInfo" style="width: 100%; text-align: left;"></label>
+                        
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+
+
+               
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+

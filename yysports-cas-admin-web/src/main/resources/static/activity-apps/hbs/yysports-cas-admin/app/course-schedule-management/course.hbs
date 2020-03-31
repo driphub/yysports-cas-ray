@@ -1,0 +1,203 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">{{yy.lang.courseManagement.name}}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{yy.lang.courseManagement.detail.subname}}</li>
+        </ol>
+    </nav>
+</div>
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+  <div class="component-header">
+         <button id="goBack" class="btn btn-back create-group" onclick="window.history.back();">{{yy.lang.goBack}}</button>
+    </div>
+  <div class="component-body">
+    <div class="course-content">
+          <div class="block">
+            <span class="label">{{yy.lang.courseName}}:</span>
+            <div class="select">
+            <select id="fitnessCourses">
+               <option value="">--{{yy.lang.selectText}}--</option>
+            </select>
+            </div>
+          </div>
+          <div class="block">
+            <span class="label">{{yy.lang.centerName}}:</span>
+            <div class="select">
+            <select id="fitnessCenters">
+              <option value="">--{{yy.lang.selectText}}--</option>
+            </select>
+            </div>
+          </div>
+          <div class="block">
+            <span class="label">{{yy.lang.placeName}}:</span>
+            <div class="select">
+            <select id="fitnessCenterPlaces">
+               <option value="">--{{yy.lang.selectText}}--</option>
+            </select>
+            </div>
+          </div>
+          <div class="block">
+            <span class="label">{{yy.lang.coachName}}:</span>
+            <div class="select">
+            <select id="fitnessCoachs">
+               <option value="">--{{yy.lang.selectText}}--</option>
+            </select>
+            </div>
+          </div>
+          <div class="block">
+            <span class="label">{{yy.lang.courseManagement.reservedMaxPeople}}:</span>
+            <input name="reservedMaxPeople" type="text" value="0">
+          </div>
+          <div class="block">
+            <span class="label">{{yy.lang.courseManagement.reservedMinPeople}}:</span>
+            <input name="reservedMinPeople" type="text" value="0">
+          </div>
+          <div class="block">
+             <span class="label">{{yy.lang.courseManagement.courseTime}}:</span>
+             <div class="c-datepicker-date-editor c-datepicker-single-editor beginTime mt10">
+               <input id="beginTimeInput" type="text" autocomplete="off" name="" placeholder="{{yy.lang.beginTime}}" class="c-datepicker-data-input only-date" value="">
+            </div>
+            <span class="">{{yy.lang.to}}</span>
+            <div class="c-datepicker-date-editor c-datepicker-single-editor endTime mt10">
+               <input id="endTimeInput" type="text" autocomplete="off" name="" placeholder="{{yy.lang.endTime}}" class="c-datepicker-data-input only-date" value="">
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="title"><span class="left">{{yy.lang.courseManagement.courseList}}：</span><a class="right clearCourseAppoint" href="javascript:void(0)">{{yy.lang.courseManagement.clearCourseAppoint}}</a></div>
+            <div id="setCourseList">
+            <div id="setCourse" class="border setCourseBlock ruleRow hide">
+              <div class="hide ruleNum">1</div>
+              <div id="week0Line" class="weekLine">
+                <label>{{yy.lang.everyText}}:</label>
+                <div id="weekblock0List" class="weekblocklist">
+                <div id="week0end" class="weekblock">
+                 <input name="week0end" type="checkbox" value="2" />
+                 <span>{{yy.lang.weekMonday}}</span>
+                </div>
+                <div class="weekblock">
+                 <input name="week0end" type="checkbox" value="3" />
+                 <span>{{yy.lang.weekTuesday}}</span>
+                </div>
+                <div class="weekblock">
+                 <input name="week0end" type="checkbox" value="4" />
+                 <span>{{yy.lang.weekWednesday}}</span>
+                </div>
+                <div class="weekblock">
+                 <input name="week0end" type="checkbox" value="5" />
+                 <span>{{yy.lang.weekThursday}}</span>
+                </div>
+                <div class="weekblock">
+                 <input name="week0end" type="checkbox" value="6" />
+                 <span>{{yy.lang.weekFriday}}</span>
+                </div>
+                <div class="weekblock">
+                 <input name="week0end" type="checkbox" value="7" />
+                 <span>{{yy.lang.weekSaturday}}</span>
+                </div>
+                <div class="weekblock">
+                 <input name="week0end" type="checkbox" value="1" />
+                 <span>{{yy.lang.weekSunday}}</span>
+                </div>
+                </div>
+              </div>
+              <div class="timeline">
+                <label>{{yy.lang.courseManagement.time}}:</label>
+                <input id="beginclass0TimeHour" class="beginclassTimeHour" name="beginclassTimeHour" class="short" type="text" value="" placeholder="HH" />
+                <!--div class="select">
+                <select id="beginclass0TimeHour">
+                   <option value="0">00</option>
+                   <option value="1">01</option>
+                   <option value="2">02</option>
+                   <option value="3">03</option>
+                   <option value="4">04</option>
+                   <option value="5">05</option>
+                   <option value="6">06</option>
+                   <option value="7">07</option>
+                   <option value="8">08</option>
+                   <option value="9">09</option>
+                   <option value="10">10</option>
+                   <option value="11">11</option>
+                   <option value="12">12</option>
+                   <option value="13">13</option>
+                   <option value="14">14</option>
+                   <option value="15">15</option>
+                   <option value="16">16</option>
+                   <option value="17">17</option>
+                   <option value="18">18</option>
+                   <option value="19">19</option>
+                   <option value="20">20</option>
+                   <option value="21">21</option>
+                   <option value="22">22</option>
+                   <option value="23">23</option>
+                   <option value="24">24</option>
+                </select>
+                </div-->
+                <span>:</span>
+                <input id="beginclass0TimeMin" class="beginclassTimeMin" name="beginclassTimeMin" class="short" type="text" value="" placeholder="MM" />
+                <span class="cutoff">{{yy.lang.to}}</span>
+                <input id="endclass0TimeHour" class="endclassTimeHour" name="endclassTimeHour" class="short" type="text" value="" placeholder="HH" />
+                <span>:</span>
+                <input id="endclass0TimeMin" class="endclassTimeMin" name="endclassTimeMin" class="short" type="text" value="" placeholder="MM" />
+                <span class="info">{{yy.lang.courseManagement.timeInfo}}</span>
+              </div>
+              <div class="setCourseDelete"><a href="javascript:void(0)"><img src="{{_staticPath}}/activity-apps/img/fitness-center-admin/app/course-schedule-management/delete-icon.png" /></a></div>
+            </div>
+            <div class="add-course-bottom"></div>
+            </div>
+            <div class="Mar_b_15"><a href="javascript:void(0)" class="addNewTime">+ {{yy.lang.courseManagement.period}}</a></div>
+            <div class="block">
+            <div class="title"><span class="left">{{yy.lang.courseManagement.ReservedEnableTime}}：</span></div>
+            <div class="border">
+              <div class="appointline"><input id="openAppoint" name="openAppoint" type="radio" value="1" checked /><label for="limitAppoint">{{yy.lang.courseManagement.immediately}}</label></div>
+              <div class="appointline"><input id="openAppoint" name="openAppoint" type="radio" value="2" /><label for="limitAppoint">{{yy.lang.courseManagement.timing}}</label>
+              <div class="c-datepicker-date-editor c-datepicker-single-editor appointTime mt10">
+                <input id="appointTimeInput" type="text" autocomplete="off" name="" placeholder="{{yy.lang.beginTime}}" class="c-datepicker-data-input" value="">
+              </div>
+              </div>
+              <div class="appointline"><input id="openAppoint" name="openAppoint" type="radio" value="3" /><label class="spec" for="limitAppoint">{{yy.lang.courseManagement.timeBegin}}<input id="openTime" type="text" value="0" />{{yy.lang.courseManagement.openAppoint}}</label></div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="title"><span class="left">{{yy.lang.courseManagement.ReservedLimit}}：</span></div>
+            <div class="border">
+              <!--div class="appointline"><span>{{yy.lang.courseManagement.limitAppoint}}：</span><input id="limitAppoint" name="limitAppoint" type="radio" value="" checked /><label for="limitAppoint">{{yy.lang.yes}}</label><input id="limitAppoint" name="limitAppoint" type="radio" value="" /><label for="limitAppoint">{{yy.lang.no}}</label></div-->
+              <div class="appointline"><label class="spec" for="limitAppoint">{{yy.lang.courseManagement.groupBegin}}<input id="notReserved" type="text" value="0" />{{yy.lang.courseManagement.noAppoint}}</label></div>
+              <div class="appointline"><label class="spec" for="limitAppoint">{{yy.lang.courseManagement.groupBegin}}<input id="notcancel" type="text" value="0" />{{yy.lang.courseManagement.noCancel}}</label></div>
+              <div class="appointline"><input id="signin" name="signin" type="checkbox" value="" checked /><label class="long" for="limitAppoint">{{yy.lang.courseManagement.groupSign}}</label></div>
+            </div>
+          </div>
+
+          <div class="block">
+             <div class="title"><span class="left">{{yy.lang.courseManagement.ReservedNotify}}：</span></div>
+             <div class="border">
+             <div class="appointline"><input id="reservdToCoach" name="appointNotice" type="checkbox" value="" /><label class="long">{{yy.lang.courseManagement.appointNotice1}}</label></div>
+             <div class="appointline"><input id="reservdToMember" name="appointNotice" type="checkbox" value="" /><label class="long">{{yy.lang.courseManagement.appointNotice2}}</label></div>
+             <div class="appointline"><input id="cancelToCoach" name="appointNotice" type="checkbox" value="" /><label class="long">{{yy.lang.courseManagement.appointNotice3}}</label></div>
+             <div class="appointline"><input id="cancelToMember" name="appointNotice" type="checkbox" value="" /><label class="long">{{yy.lang.courseManagement.appointNotice4}}</label></div>
+             <div class="appointline"><input id="beforeTimeCheck" name="appointNotice" type="checkbox" value="" /><label class="spec long" for="limitAppoint">{{yy.lang.courseManagement.appointNotice5}} <input id="beforeTime" type="text" value="0" />{{yy.lang.courseManagement.receive}}</label></div>
+             <div class="appointline"><input id="noEnoughToAdmin" name="appointNotice" type="checkbox" value="" /><label class="long">{{yy.lang.courseManagement.appointNotice6}}</label></div>
+             </div>
+           </div>
+
+           <div class="button-bottom">
+              <a href="javascript:;" id="basicSumbit" class="btn btn-red">{{yy.lang.confrimButton}}</a>&nbsp;
+             </div>
+
+          </div>
+        </div>
+  </div>
+</div>
+
+<div id="popup" class="hidden">
+  <div class="mask"></div>
+  <div class="popup-content">
+    <h3>{{yy.lang.infoButton}}</h3>
+    <div class="error_text">
+      <p></p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-info btn-close" onclick="$('#popup').hide();">{{yy.lang.closeButton}}</button>
+      </div>
+  </div>
+</div>

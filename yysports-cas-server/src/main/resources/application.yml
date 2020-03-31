@@ -1,0 +1,62 @@
+spring:
+  application:
+    name: yysports-cas-server
+  profiles:
+    active: dev
+  freemarker:
+    request-context-attribute: request
+    expose-request-attributes: true
+    settings:
+      number_format: computer
+  http:
+    encoding:
+      force: true
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+  jackson: 
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
+  redis:
+    host: 10.0.0.168
+    port: 6379
+    database: 8
+    password: sG6/bDiO2dNunoSACI2fPx1ZV6C+S004XvPHNbzG9u8=
+    pool:
+      max-idle: 150
+      max-active: 450
+      max-wait: 5000
+      min-idle: 40      
+  datasource: 
+    driver-class-name: com.mysql.jdbc.Driver
+    #url: jdbc:mysql://127.0.0.1:3309/yysports_co_marketing?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://yddb01.mysql.database.chinacloudapi.cn:3306/yysports_co_marketing?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: uapp_bi@yddb01
+    password: 4rfv%^YHN 
+    tomcat:
+      max-active: 100
+      max-idle: 50
+      max-wait: 60000
+      test-while-idle: true
+      time-between-eviction-runs-millis: 100000
+      min-evictable-idle-time-millis: 110000
+      validation-query: select 1
+      validation-query-timeout: 1
+      test-on-borrow: true
+      test-on-return: false
+      remove-abandoned-timeout: 180
+      remove-abandoned: true
+server:
+  port: 9003
+  contextPath: /yysports-cas-server
+  tomcat:
+    max-threads: 500
+
+logging:
+  path: /logs/
+  
+session.prefix: cas_service_
+session.data.expired.time: 1200  
+ 

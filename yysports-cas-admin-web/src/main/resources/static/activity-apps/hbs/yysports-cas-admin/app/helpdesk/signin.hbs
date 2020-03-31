@@ -1,0 +1,72 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">{{yy.lang.helpdesk.name}}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{yy.lang.helpdesk.courseSign}}</li>
+        </ol>
+    </nav>
+</div>
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+    <div class="component-body">
+        <div class="helpdeskTop">
+            <div class="helpdeskTitle"><a href="index.html">{{yy.lang.helpdesk.courseAppoint}}</a></div>
+            <div class="helpdeskTitle active"><a href="signin.html">{{yy.lang.helpdesk.courseSign}}</a></div>
+        </div>
+        <div class="scanSignIn-content">
+             <div id="searchBlock" etype="search" listId="list"></div>
+        </div>
+        <div id="list" etype="list" datalist="pagingbyHelpdeskCourseSign" config="yy.app.signinlistConfig" loadingImg="true" selector="all" ></div>
+    </div>
+</div>
+
+
+<div id="appointSignInPopup" class="model hidden">
+    <div class="mask"></div>
+    <div class="modal-content">
+        <div class="modal-header"><h2>{{yy.lang.helpdesk.courseSign}}</h2></div>
+        <div class="modal-dialog">
+            <div class="addAppointContent">
+                <div class="fitnessInfo">
+                 <p>{{yy.lang.memberName}}：<span class="courseMember"></span></p>
+                 <p>{{yy.lang.courseName}}：<span class="courseName"></span></p>
+                 <p>{{yy.lang.centerName}}：<span class="courseCenterName"></span></p>
+                 <p>{{yy.lang.placeName}}：<span class="coursePlaceName"></span></p>
+                 <p>{{yy.lang.coachName}}：<span class="courseCoachName"></span></p>
+                 <p>{{yy.lang.date}}：<span class="courseSchemaTime"></span></p>
+                 <p>{{yy.lang.time}}：<span class="courseCourseTime"></span></p>
+                </div>
+                <div class="appointInfo">{{yy.lang.helpdesk.confrimSign}}！</div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="signInSumbit" class="btn btn-red btn-cancel" onclick="$('#appointSignInPopup').hide();">{{yy.lang.confrimButton}}</button>
+        </div>
+    </div>
+</div>
+
+<div id="signInCancelPopup" class="model hidden">
+    <div class="mask"></div>
+    <div class="modal-content">
+        <div class="modal-header"><h2>{{yy.lang.helpdesk.cancelSign}}</h2></div>
+        <div class="modal-dialog">
+            <p class="cancelText">{{yy.lang.helpdesk.confrimCancelSign}}？</p>
+        </div>
+        <div class="modal-footer">
+            <button id="comfireCancel" class="btn btn-red btn-cancel">{{yy.lang.confrimButton}}</button>
+            <button id="signInCancel"  class="btn btn-cancel" onclick="$('#signInCancelPopup').hide()">{{yy.lang.closeButton}}</button>
+        </div>
+    </div>
+</div>
+
+<div id="popup" class="hidden">
+  <div class="mask"></div>
+  <div class="popup-content">
+    <h3>{{yy.lang.infoButton}}</h3>
+    <div class="error_text">
+      <p></p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-info btn-close" onclick="$('#popup').hide();">{{yy.lang.closeButton}}</button>
+      </div>
+  </div>
+</div>

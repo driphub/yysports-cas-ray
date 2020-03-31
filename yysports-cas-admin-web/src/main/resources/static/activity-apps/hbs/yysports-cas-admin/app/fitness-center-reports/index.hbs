@@ -1,0 +1,54 @@
+<div id="yyadmin_content_breadcrumb">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">{{yy.lang.report.name}}</a></li>
+			<li class="breadcrumb-item active" aria-current="page">{{yy.lang.report.saleOrder}}</li>
+		</ol>
+	</nav>
+</div>
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+	<div class="component-body">
+        <div class="reportTop">
+            <div class="reportTitle active"><a href="index.html">{{yy.lang.report.saleOrder}}</a></div>
+            <div class="reportTitle"><a href="appoint.html">{{yy.lang.report.appointReport}}</a></div>
+        </div>
+        <div id="searchBlock" etype="search" listId="list"></div>
+        <div id="list" class="courseList" etype="list" datalist="listOrderPaging" config="yy.app.listConfig" loadingImg="true" selector="all" ></div>
+	</div>
+</div>
+
+<div id="reportPopup" class="model hidden">
+    <div class="mask"></div>
+    <div class="modal-content">
+        <div class="modal-header"><h2>详情</h2></div>
+        <div class="modal-dialog">
+            <div class="reportPopupContent">
+                <div class="reportInfo">
+                 <p><span>{{yy.lang.report.orderId}}：</span><span class="reportId"></span></p>
+                 <p><span>{{yy.lang.memberName}}：</span><span class="reportMemberId"></span></p>
+                 <p><span>{{yy.lang.report.sale}}：</span><span class="reportSale"></span></p>
+                 <p><span>{{yy.lang.report.payStatus}}：</span><span class="reportStatus"></span></p>
+                 <p><span>{{yy.lang.report.payNum}}：</span><span class="reportPrice"></span></p>
+                </div>
+                <div class="fixPrice hidden"><label>* 改价为</label><input name="dealPrice" type="text" value="" /><span>{{yy.lang.unit}}</span></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="reportView btn btn-red btn-cancel hidden" onclick="$('#reportPopup').hide();$(this).addClass('hidden')">{{yy.lang.confrimButton}}</button>
+            <button id="reportSumbit" class="reportFix btn btn-red btn-cancel hidden">{{yy.lang.confrimButton}}</button>
+        </div>
+    </div>
+</div>
+
+<div id="popup" class="hidden">
+  <div class="mask"></div>
+  <div class="popup-content">
+    <h3>{{yy.lang.infoButton}}</h3>
+    <div class="error_text">
+      <p></p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-info btn-close" onclick="$('#popup').hide();">{{yy.lang.closeButton}}</button>
+      </div>
+  </div>
+</div>

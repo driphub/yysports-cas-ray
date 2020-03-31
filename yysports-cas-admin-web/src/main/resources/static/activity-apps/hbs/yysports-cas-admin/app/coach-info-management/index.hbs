@@ -1,0 +1,22 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index">{{yy.lang.role.management}}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{yy.lang.auth.management}}</li>
+        </ol>
+    </nav>
+</div>
+
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+    <div class="component-header">
+        <a class="btn btn-primary create-group" href="coachAdd?id=0">{{yy.lang.role.add}}</a>
+    </div>
+
+
+    <div class="component-body">
+
+        <div id="Coachlist"  etype="list" datalist="listCoachPaging" config="yy.app.CoachlistConfig" loadingImg="true"
+            selector="none"></div>
+
+    </div>
+</div>

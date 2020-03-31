@@ -1,0 +1,174 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index">課程管理</a></li>
+            <li class="breadcrumb-item active" aria-current="page">課程添加</li>
+        </ol>
+    </nav>
+</div>
+
+
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+    <div class="component-body">
+        <div class="rule-content">
+            <form class="form rule-config" novalidate="true">
+
+                <div class="rule-config-line">
+                    <div class="rule-block rule-All-block">
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>課程圖片：</label>
+                            <div class="selectImg">
+                                <input type="file"   name="files" onchange="imgurl(this)"/>
+                                <img/>
+                                 <input type="hidden"  class="UploadFileUrl" name='UploadFileUrl' placeholder="未上傳圖片"/>
+                                 <span>+</span>
+                            </div>
+                            <div class="selectImg">
+                                <input type="file"   name="files" onchange="imgurl(this)"/>
+                                <img/>
+                                 <input type="hidden"  class="UploadFileUrl" name='UploadFileUrl' />
+                                 <span>+</span>
+                            </div>
+                            <div class="selectImg">
+                                <input type="file"   name="files" onchange="imgurl(this)"/>
+                                <img/>
+                                 <input type="hidden"  class="UploadFileUrl" name='UploadFileUrl' />
+                                 <span>+</span>
+                            </div>
+                            <div class="selectImg">
+                                <input type="file"   name="files" onchange="imgurl(this)"/>
+                                <img/>
+                                 <input type="hidden"  class="UploadFileUrl" name='UploadFileUrl' />
+                                 <span>+</span>
+                            </div>
+                            <div class="selectImg">
+                                <input type="file"   name="files" onchange="imgurl(this)"/>
+                                <img/>
+                                 <input type="hidden"  class="UploadFileUrl" name='UploadFileUrl' />
+                                 <span>+</span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red"></span>&nbsp;</label>
+                            <label style="text-align: center; color:red; width:80%">建议尺寸1280x640（2:1），文件不超过500kb</label>
+                            <div class="clear"></div>
+                        </div>
+                        
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>課程名稱：</label>
+                            <input  class="middle-input left" type="text" name="name" value="" placeholder="請填寫課程名稱" register>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>課程類型：</label>
+                            <div class="select">
+                                <select name="type" >
+                                    <option value="1">活動</option>
+                                    <option value="2">舞蹈</option>
+                                    <option value="3">瑜珈</option>
+                                    <option value="4">核心</option>
+                                    <option value="5">塑身</option>
+                                </select>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>課程分級：</label>
+                            <div class="select">
+                                <select name="courseLevel" >
+                                    <option value="1">T1</option>
+                                    <option value="2">T2</option>
+                                    <option value="3">T3</option>
+                                    <option value="4">T4</option>
+                                    <option value="5">T5</option>
+                                </select>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>是否高價課：</label>
+                            <input type="radio" class="radio" id="HightPriceA" name="isHightPrice" value="0" checked=""><label for="HightPriceA">否</label>
+                             <input type="radio" class="radio" id="HightPriceB" name="isHightPrice" value="1"><label for="HightPriceB">是</label>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>單課價：</label>
+                            <input  class="middle-input left" type="text" name="unitPrice" value="" maxlength="8"  onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"    placeholder="請填單課價" register>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>課程時長：</label>
+                            <input class="middle-input left" type="text" name="durationTime" maxlength="3" value="" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"  placeholder="請填寫課程時長" register>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="rule-bar" id="selCoure">
+                            <label class="left" for="" ><span class="red">*</span>課程綁卡：</label>
+                            <a class="btn btn-primary create-group" href="#" id="" onclick="show_pop();">選擇綁卡</a>
+                            <label class="lab_course" id="Lb-course"  ></label>
+                            <input type="hidden" id="ip_course" class="ip_course" placeholder="請填寫綁卡" register />
+                            <div class="clear"></div>
+                        </div>
+
+                        {{!-- <div class="rule-bar">
+                            <label class="left" for=""></label>
+                            <input type="checkbox" name="sellOnce" value="1"/>單詞卡銷售
+                            <span class="red">*無需綁卡獨立銷售，添加課程自動排課；用戶購買后自動預約</span>
+                            <div class="clear"></div>
+                        </div> --}}
+
+                        <div class="rule-bar">
+                            <label class="left" for="">課程詳情：</label>
+                            <p>&nbsp;</p>
+                            {{!-- <textarea placeholder="請填寫課程詳情" name="detail"></textarea> --}}
+                        </div>
+                        <div class="row">
+                            <div id="editor1"  config="yy.app.editor1" etype="form.editor"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="button-bottom">
+                    <a href="javascript:;" id="basicSumbit" class="btn btn-red" data-type="">保存</a>&nbsp;
+                    <a href="index" class="btn btn-cancel btn-info">取消</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="popup" class="hidden">
+  <div class="mask"></div>
+  <div class="popup-content">
+    <h3>選擇綁卡</h3>
+    <div class="error_text">
+      <div class="component-body" style="overflow: auto;max-height:350px">
+        <div id="searchBlock" etype="search" listId="list"></div>
+        <div id="list" etype="list" datalist="listNewCardBinding" config="yy.app.listConfig" loadingImg="true" selector="all"></div>
+    </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-info btn-close" onclick="popupHide()">確定</button>
+        <button class="btn btn-info btn-close" onclick="$('#popup').hide();">关闭</button>
+      </div>
+  </div>
+</div>
+
+<div id="popup1" class="hidden" style="display: none;">
+  <div class="mask"></div>
+  <div class="popup-content" style="width:30% !important">
+    <h3>提示</h3>
+    <div class="error_text">
+      <p>名字不能為空</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-info btn-close" onclick="$('#popup1').hide();">关闭</button>
+      </div>
+  </div>
+</div>

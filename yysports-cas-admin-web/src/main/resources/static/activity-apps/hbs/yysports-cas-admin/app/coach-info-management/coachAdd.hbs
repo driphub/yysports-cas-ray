@@ -1,0 +1,83 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index">{{yy.lang.coach.management}}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{yy.lang.coach.list}}</li>
+        </ol>
+    </nav>
+</div>
+
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+    <div class="component-body">
+        <div class="rule-content">
+            <form class="form rule-config" novalidate="true">
+
+                <div class="rule-config-line">
+                    <div class="rule-block rule-All-block">
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.headIcon}}：</label>
+                            <div class="selectImg">
+                                <input type="file"    onchange="imgurl(this)"/>
+                                <img name='headIcon' placeholder="{{yy.lang.coach.headIcon-placeholder}}" />
+                                 <input type="hidden"  class="UploadFileUrl" name='headIcon' placeholder="{{yy.lang.coach.headIcon-placeholder}}"/>
+                                 <span>+</span>
+                            </div>
+                            
+                            <div class="clear"></div>
+                        </div>
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.name}}：</label>
+                            <input  class="middle-input left" type="text" name="name" value="" placeholder="{{yy.lang.coach.name-placeholder}}"/>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.gender}}：</label>
+                            <input type="radio" class="radio" id="radioA" name="gender"  value="0" checked/><label for="radioA">男</label>
+                             <input type="radio" class="radio" id="radioB" name="gender" value="1" /><label for="radioB">女</label>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.phone}}：</label>
+                           <input  class="middle-input left" type="text" name="phone" value="" placeholder="{{yy.lang.coach.phone-placeholder}}">
+                            <div class="clear"></div>
+                        </div>
+                        
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.specialSkill}}：</label>
+                            <input  class="middle-input left" type="text" name="specialSkill" value="" placeholder="{{yy.lang.coach.specialSkill-placeholder}}">
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.describe}}：</label>
+                            <textarea  name="describe"style="visibility:hidden;height:15px"></textarea>
+                            <input  class="middle-input left" type="sellBinding" name="specialSkill" value="1" />
+                            <div class="clear"></div>
+                        </div>
+
+                       
+
+                       
+
+                        
+                    </div>
+                     <div class="rule-bar" style="margin-left: 110px;">
+                            <label class="left" for=""></label>
+                            
+                            <div id="editor1" etype="form.editor" style="width: 90%;"  ></div>
+                            <div class="clear"></div>
+                        </div>
+                </div>
+
+
+
+                <div class="button-bottom">
+                    <a href="javascript:;" id="basicSumbit" class="btn btn-red" data-type="">{{yy.lang.coach.save}}</a>&nbsp;
+                    <a href="index" class="btn btn-cancel btn-info">{{yy.lang.coach.cancel}}</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

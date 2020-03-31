@@ -1,0 +1,73 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">{{yy.lang.coach.management}}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{yy.lang.coach.list}}</li>
+        </ol>
+    </nav>
+</div>
+
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+    <div class="component-body">
+        <div class="rule-content">
+            <form class="form rule-config" novalidate="true">
+
+                <div class="rule-config-line">
+                    <div class="rule-block rule-All-block">
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.headIcon}}：</label>
+                            <div class="selectImg">
+                                <input type="file"    onchange="imgurl(this)"/>
+                                <img/>
+                                 <input type="hidden"  class="UploadFileUrl" name='UploadFileUrl' />
+                                 <span>+</span>
+                            </div>
+                            
+                            <div class="clear"></div>
+                        </div>
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.name}}：</label>
+                            <input  class="middle-input left" type="text" name="name" value="" placeholder="請輸入種類名稱">
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.gender}}：</label>
+                            <input type="radio" class="radio" id="radioA" name="radio1" checked value="1"/><label for="radioA">男</label>
+                             <input type="radio" class="radio" id="radioB" name="radio1" value="2" /><label for="radioB">女</label>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.phone}}：</label>
+                           <input  class="middle-input left" type="text" name="phone" value="" placeholder="請輸入手機號">
+                            <div class="clear"></div>
+                        </div>
+                        
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.specialSkill}}：</label>
+                            <input  class="middle-input left" type="text" name="unit" value="" placeholder="請輸入擅長項目">
+                            <div class="clear"></div>
+                        </div>
+
+                        
+
+                       
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>{{yy.lang.coach.describe}}：</label>
+                            <textarea  name="detail"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="button-bottom">
+                    <a href="javascript:;" id="basicSumbit" class="btn btn-red" data-type="">保存</a>&nbsp;
+                    <a href="javascript:void(0)" class="btn btn-cancel btn-info">取消</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

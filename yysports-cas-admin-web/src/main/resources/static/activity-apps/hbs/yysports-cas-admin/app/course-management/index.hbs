@@ -1,0 +1,21 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">課程管理</a></li>
+            <li class="breadcrumb-item active" aria-current="page">課程列表</li>
+        </ol>
+    </nav>
+</div>
+
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+    <div class="component-header">
+        <a class="btn btn-primary create-group" href="courseAdd?id=0">添加課程</a>
+        <a class="btn btn-primary create-group" href="course-card?id=0">課程綁卡</a>
+    </div>
+
+
+    <div class="component-body">
+        <div id="searchBlock" etype="search" listId="list"></div>
+        <div id="list" etype="list" datalist="listCoursePaging" config="yy.app.listConfig" loadingImg="true" selector="none" ></div>
+    </div>
+</div>

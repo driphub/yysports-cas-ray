@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: yysports-cas-lib
+  profiles:
+    active: dev
+  freemarker:
+    request-context-attribute: request
+    expose-request-attributes: true
+    settings:
+      number_format: computer
+  http:
+    encoding:
+      force: true
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+  jackson: 
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
+server:
+  port: 9001
+  contextPath: /yysports-cas-lib
+  tomcat:
+    max-threads: 500
+
+logging:
+  path: /logs/
+
+app:
+  #應用訪問地址 (必填)
+  apServerUrl: 'http://127.0.0.1:${server.port}'
+  #應用登入地址 (選填)
+  #apLoginUrl: '${app.apServerUrl}/login'
+  #應用登出地址 (選填)
+  #apLogoutUrl: '${app.apServerUrl}/logout'   
+  #應用除外URLs (選填)   
+  excludedUrls: /swagger-ui.html, /webjars/springfox-swagger-ui, /swagger-resources, /v2/api-docs
+  #應用系統名稱 (必填)
+  name: MIDDLE
+  #filter生效URL(選填)
+  filterUrlPattern: '/*'

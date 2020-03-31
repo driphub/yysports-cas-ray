@@ -1,0 +1,96 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index">課程管理</a></li>
+            <li class="breadcrumb-item active" aria-current="page">課程綁卡</li>
+        </ol>
+    </nav>
+</div>
+
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+    <div class="component-header">
+        <a class="btn btn-primary create-group" href="javascript:;" onclick="aa()">綁定新卡</a>
+        <p><span class="red">*如課程綁定次卡類健身卡，則排期課程不能超過卡設置總課次</span></p>
+        <p><span class="red">
+                課程綁定次卡類健身卡，用戶完成購卡自動代用戶完成預約</span></p>
+    </div>
+    {{!-- <div class="component-body">
+        <div id="searchBlock" etype="search" listid="list">
+            <div class="search-block">
+                <fieldset>
+                    <span class="span3">
+                        <label for="">課程名稱：</label>
+                        <div class="select"><select data-mapping="cardId">
+                                <option value="" selected="">-- 请选择課程 --</option>
+                                <option value="1">瑜伽課</option>
+                                <option value="2">籃球課</option>
+                                <option value="3">健身課</option>
+                                <option value="4">美術課</option>
+                            </select></div>
+                    </span>
+                    <span class="pull-right"><a href="javascript:;" data-target="list"
+                            class="btn btn-search">搜索</a>&nbsp; <a href="javascript:;" data-target="list"
+                            class="btn btn-reset">重置</a></span>
+                </fieldset>
+            </div>
+        </div>
+        <div id="list" etype="list" datalist="search" config="yy.app.listConfig" loadingimg="true" selector="all">
+            <table class="table table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <th width="60"><a href="javascript:;" onclick="wac.lib.checkboxToggleAll('list', 'all')">全选</a>
+                            <a href="javascript:;" onclick="wac.lib.checkboxToggleAll('list', 'none')">X</a></th>
+                        <th>ID</th>
+                        <th>健身卡名稱</th>
+                        <th>類型</th>
+                        <th>數量</th>
+                        <th>狀態</th>
+                        <th>價格</th>
+                        <th>創建時間</th>
+                        <th style="width:15%; text-align:center">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="list1116">
+                        <td><input name="list" type="checkbox" value="1116"></td>
+                        <td>60</td>
+                        <td>尊享健身月卡</td>
+                        <td>期限卡</td>
+                        <td>50</td>
+                        <td>正常</td>
+                        <td>2600</td>
+                        <td>2019-8-29</td>
+                        <td style="text-align:center">
+                            <a style="padding:0 5px" href="javascript:;"
+                                onclick="yy.app.listConfig.operationColumn.add.event(&quot;1116&quot;)">解綁</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div> --}}
+        <div class="component-body">
+        <div id="searchBlock" etype="search" listId="list"></div>
+        <div id="list" etype="list" datalist="listCardBinding" config="yy.app.listConfig" loadingImg="true" selector="none" ></div>
+    </div>
+</div>
+
+
+<div id="popup" class="hidden">
+  <div class="mask"></div>
+  <div class="popup-content">
+    <h3>選擇綁卡</h3>
+    <div class="error_text">
+      <div class="component-body" style="overflow: auto;max-height:350px">
+        <div id="searchBlock" etype="search" listId="list"></div>
+        <div id="Cardlist" etype="list" datalist="listNewCardBinding" config="yy.app.listConfig1" loadingImg="true" selector="all"></div>
+    </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-info btn-close" onclick="popNewCard()">確定</button>
+        <button class="btn btn-info btn-close" onclick="$('#popup').hide();">关闭</button>
+      </div>
+  </div>
+</div>

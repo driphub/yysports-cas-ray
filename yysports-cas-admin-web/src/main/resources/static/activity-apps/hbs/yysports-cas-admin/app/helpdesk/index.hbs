@@ -1,0 +1,100 @@
+<div id="yyadmin_content_breadcrumb">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">{{yy.lang.helpdesk.name}}</a></li>
+			<li class="breadcrumb-item active" aria-current="page">{{yy.lang.helpdesk.courseAppoint}}</li>
+		</ol>
+	</nav>
+</div>
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+	<div class="component-body">
+        <div class="helpdeskTop">
+            <div class="helpdeskTitle active"><a href="index.html">{{yy.lang.helpdesk.courseAppoint}}</a></div>
+            <div class="helpdeskTitle"><a href="signin.html">{{yy.lang.helpdesk.courseSign}}</a></div>
+        </div>
+        <div id="searchBlock" etype="search" listId="list"></div>
+        <div id="list" class="courseList" etype="list" datalist="pagingFindbyHelpdesk" config="yy.app.listConfig" loadingImg="true" selector="all" ></div>
+	</div>
+</div>
+
+
+<div id="addAppointPopup" class="model hidden">
+  <div class="mask"></div>
+  <div class="modal-content">
+    <a href="javascript:void(0)" class="close" onclick="$('#addAppointPopup').hide()"><img src="{{_staticPath}}/activity-apps/img/fitness-center-admin/app/close.png" /></a>
+    <div class="modal-header"><h2>{{yy.lang.helpdesk.addAppoint}}</h2></div>
+    <div class="modal-dialog">
+        <div class="addAppointContent">
+            <div class="top o-hidden">
+      <div class="left imgBorder">
+          <img id='appointImg' src="{{_staticPath}}/activity-apps/img/fitness-center-admin/app/course-schedule-management/default.png" />
+      </div>
+      <div class="left fitnessInfo">
+          <p>{{yy.lang.courseName}}：<span class="courseName"></span></p>
+          <p>{{yy.lang.centerName}}：<span class="courseCenterName"></span></p>
+          <p>{{yy.lang.placeName}}：<span class="coursePlaceName"></span></p>
+          <p>{{yy.lang.coachName}}：<span class="courseCoachName"></span></p>
+          <p>{{yy.lang.date}}：<span class="courseSchemaTime"></span></p>
+          <p>{{yy.lang.time}}：<span class="courseCourseTime"></span></p>
+      </div>
+            </div>
+            <div class="addPhone"><label>{{yy.lang.member.phone}}</label><input type="text" name="memberPhone" value="" placeholder="{{yy.lang.input.member.phone}}" /></div>
+            <div class="appointInfo hidden">{{yy.lang.helpdesk.appointSuccess}}！</div>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <button id="addAppointButton" class="btn btn-red btn-cancel">{{yy.lang.confrimButton}}</button>
+      <button id="addAppintCancel" class="btn btn-red btn-cancel hidden">{{yy.lang.closeButton}}</button>
+    </div>
+  </div>
+</div>
+
+<div id="appointDetailPopup" class="model hidden">
+    <div class="mask"></div>
+    <div class="modal-content">
+        <div class="modal-header"><h2>{{yy.lang.helpdesk.appointDetail}}</h2></div>
+        <div class="modal-dialog">
+            <div class="addAppointContent">
+                <div class="fitnessInfo">
+                    <p>{{yy.lang.courseName}}：<span class="courseName"></span></p>
+                    <p>{{yy.lang.centerName}}：<span class="courseCenterName"></span></p>
+                    <p>{{yy.lang.placeName}}：<span class="coursePlaceName"></span></p>
+                    <p>{{yy.lang.coachName}}：<span class="courseCoachName"></span></p>
+                    <p>{{yy.lang.date}}：<span class="courseSchemaTime"></span></p>
+                    <p>{{yy.lang.time}}：<span class="courseCourseTime"></span></p>
+                </div>
+                <div class="appointInfo">{{yy.lang.helpdesk.appointNum}}<span class="appointNum"></span></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="cancel" class="btn btn-red btn-cancel">{{yy.lang.confrimButton}}</button>
+        </div>
+    </div>
+</div>
+
+<div id="appointCancelPopup" class="model hidden">
+    <div class="mask"></div>
+    <div class="modal-content">
+        <div class="modal-header"><h2>{{yy.lang.helpdesk.cancelAppoint}}</h2></div>
+        <div class="modal-dialog">
+            <p class="cancelText">{{yy.lang.confrimCancel}}？</p>
+        </div>
+        <div class="modal-footer">
+            <button id="comfireCancel" class="btn btn-red btn-cancel">{{yy.lang.confrimButton}}</button>
+            <button id="cancel"  class="btn btn-cancel" onclick="$('#appointCancelPopup').hide()">{{yy.lang.closeButton}}</button>
+        </div>
+    </div>
+</div>
+
+<div id="popup" class="hidden">
+  <div class="mask"></div>
+  <div class="popup-content">
+    <h3>{{yy.lang.infoButton}}</h3>
+    <div class="error_text">
+      <p></p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-info btn-close" onclick="$('#popup').hide();">{{yy.lang.closeButton}}</button>
+      </div>
+  </div>
+</div>

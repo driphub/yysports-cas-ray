@@ -1,0 +1,67 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">场馆管理</a></li>
+            <li class="breadcrumb-item active" aria-current="page">场馆列表</li>
+        </ol>
+    </nav>
+</div>
+
+
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+    <div class="component-header">
+        <a class="btn btn-primary create-group" href="index">場館列表</a>
+        <a class="btn btn-primary create-group" href="place">場地列表</a>
+    </div>
+    <div class="component-body">
+        <div class="rule-content">
+            <form class="form rule-config" novalidate="true">
+
+                <div class="rule-config-line">
+                    <div class="rule-block rule-All-block">
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>場地名稱：</label>
+                            <input class="middle-input left" type="text" name="name" value="" placeholder="請輸入場地名稱" />
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>所在場館：</label>
+                            <div class="select">
+                                <select name="fitnessCenterId"></select>
+                            </div>
+
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red">*</span>場地可容納人數：</label>
+                            <input class="middle-input left" type="text" name="peopleLimit" value="" maxlength="8" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" placeholder="請輸入最多可容納人數">
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="rule-bar">
+                            <label class="left" for=""><span class="red"></span>備註：</label>
+                            <input class="middle-input left" type="text" name="remark" value="" placeholder="請特殊要求或注意事項">
+                            <div class="clear"></div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="button-bottom">
+                    <a href="javascript:;" id="basicSumbit" class="btn btn-red" data-type="">保存</a>&nbsp;
+                    <a href="place" class="btn btn-cancel btn-info">取消</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

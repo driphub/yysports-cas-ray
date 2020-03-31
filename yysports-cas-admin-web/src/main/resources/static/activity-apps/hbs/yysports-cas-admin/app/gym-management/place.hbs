@@ -1,0 +1,24 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index">場館管理</a></li>
+            <li class="breadcrumb-item active" aria-current="page">場地信息</li>
+        </ol>
+    </nav>
+</div>
+
+
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+    <div class="component-header">
+        <a class="btn btn-primary create-group" href="gymAdd?id=0">添加场馆</a>
+        <a class="btn btn-primary create-group" href="placeAdd?id=0">添加场地</a>
+    </div>
+    <div class="title">
+            <div class="tag " data-show="1" ><a href="index">場館信息</a></div>
+            <div class="tag active" data-show="0"><a href="place">場地信息</a></div>
+    </div>
+    <div class="component-body">
+        <div id="searchBlock" etype="search" listId="list"></div>
+        <div id="list" etype="list" datalist="listPlacePaging" config="yy.app.listConfig" loadingImg="true" selector="none" ></div>
+    </div>
+</div>

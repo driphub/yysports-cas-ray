@@ -1,0 +1,82 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">{{yy.lang.courseManagement.name}}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{yy.lang.courseManagement.detail.subname}}</li>
+        </ol>
+    </nav>
+</div>
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+  <div class="component-header o-hidden">
+         <button id="goBack" class="btn btn-back create-group left" onclick="window.history.back();">{{yy.lang.goBack}}</button>
+         <div class="right">
+           <a href="javascript:;" id="detailfixSumbit" class="btn btn-red">{{yy.lang.fixButton}}</a>&nbsp;
+           <a href="javascript:void(0)" id="deleteSumbit" class="btn btn-cancel btn-info">{{yy.lang.deleteButton}}</a>
+         </div>
+    </div>
+  <div class="component-body">
+    <div class="course-content">
+          <div class="block">
+            <div class="label">{{yy.lang.courseName}}:</div>
+            <div class="fitnessCourseName left"><p></p></div>
+          </div>
+          <div class="block">
+            <div class="label">{{yy.lang.centerName}}:</div>
+            <div class="fitnessCenterName left"><p></p></div>
+          </div>
+          <div class="block">
+            <div class="label">{{yy.lang.placeName}}:</div>
+            <div class="fitnessPlaceName left"><p></p></div>
+          </div>
+          <div class="block">
+            <div class="label">{{yy.lang.coachName}}:</div>
+            <div class="fitnessCoachName left"><p></p></div>
+          </div>
+          <div class="block">
+            <div class="label">{{yy.lang.courseManagement.reservedMaxPeople}}:</div>
+            <div class="reservedMaxPeople left"><p></p></div>
+          </div>
+          <div class="block reservedMinPeople"></div>
+          <div class="block">
+             <div class="label">{{yy.lang.courseManagement.courseTime}}:</div>
+             <p class="left courseTime"></p>
+          </div>
+          <div class="block">
+            <div class="title"><span class="left">{{yy.lang.courseManagement.courseList}}：</span></div>
+            <div class="border courseList"></div>
+            <div class="block">
+            <div class="title"><span class="left">{{yy.lang.courseManagement.ReservedEnableTime}}：</span></div>
+            <div class="border">
+              <div class="ReservedEnableTime"></div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="title"><span class="left">{{yy.lang.courseManagement.ReservedLimit}}：</span></div>
+            <div class="border">
+              <div class="ReservedLimit">
+              </div>
+            </div>
+          </div>
+          <div class="block">
+             <div class="title"><span class="left">{{yy.lang.courseManagement.ReservedNotify}}：</span></div>
+             <div class="border">
+              <div class="ReservedNotify"><p class="noReservedNotify">{{yy.lang.noInfoButton}}</p></div>
+             </div>
+           </div>
+          </div>
+        </div>
+  </div>
+</div>
+
+<div id="popup" class="hidden">
+  <div class="mask"></div>
+  <div class="popup-content">
+    <h3>{{yy.lang.infoButton}}</h3>
+    <div class="error_text">
+      <p></p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-info btn-close" onclick="$('#popup').hide();">{{yy.lang.closeButton}}</button>
+      </div>
+  </div>
+</div>

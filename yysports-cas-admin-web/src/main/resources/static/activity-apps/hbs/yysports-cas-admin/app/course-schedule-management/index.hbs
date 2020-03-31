@@ -1,0 +1,68 @@
+<div id="yyadmin_content_breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">{{yy.lang.courseManagement.name}}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{yy.lang.courseManagement.index.subname}}</li>
+        </ol>
+    </nav>
+</div>
+
+<div id="yyadmin_content_main" class="yyadmin-content-main">
+    <div class="component-body">
+       <div class="courseTop">
+        <div class="courseTitle">{{yy.lang.courseManagement.table}}</div>
+        <a class="courselink" href="javascript:void(0)">{{yy.lang.courseManagement.batch}}</a>
+        </div>
+        <div class="search-block">
+          <fieldset>
+            <span id="list_name" class="span3">
+              <label class="left Mar_r_9 long">{{yy.lang.courseManagement.screenOut}}</label>
+              <div class="select">
+              <select id="fitnessCenters">
+                 <option value="">--{{yy.lang.courseManagement.selectCenter}}--</option>
+              </select>
+              </div>
+            </span>
+            <span id="list_fitnessCardType" class="span3">
+              <div class="select">
+              <select id="fitnessCoachs">
+                 <option value="">--{{yy.lang.courseManagement.selectCoach}}--</option>
+              </select>
+              </div>
+            </span>
+          </fieldset>
+          <div class="datalink">
+            <a class="dayLink active" data-viewType="1" href="javascript:void(0)">{{yy.lang.week}}</a>
+            <a class="monthLink" data-viewType="2" href="javascript:void(0)">{{yy.lang.month}}</a>
+          </div>
+        </div>
+        <div class="courseContent">
+           <div id="data">
+              <p class="dataLine">
+               <span id="prev" class="prevWeek">{{yy.lang.lastWeek}}</span>
+               <span id="year"></span>
+               <span id="next" class="nextWeek">{{yy.lang.nextWeek}}</span>
+              </p>
+              <div class="courseTable">
+                 <table class="table table-condensed table-striped">
+                   <tr>
+                     <th>{{yy.lang.weekSunday}}</th>
+                     <th>{{yy.lang.weekMonday}}</th>
+                     <th>{{yy.lang.weekTuesday}}</th>
+                     <th>{{yy.lang.weekWednesday}}</th>
+                     <th>{{yy.lang.weekThursday}}</th>
+                     <th>{{yy.lang.weekFriday}}</th>
+                     <th>{{yy.lang.weekSaturday}}</th>
+                   </tr>
+                   <tr id="courseList"> </tr>
+                   <tr id="courseList2"> </tr>
+                   <tr id="courseList3"> </tr>
+                   <tr id="courseList4"> </tr>
+                   <tr id="courseList5"> </tr>
+                   <tr id="courseList6"> </tr>
+                 </table>
+              </div>
+             </div>
+        </div>
+    </div>
+</div>

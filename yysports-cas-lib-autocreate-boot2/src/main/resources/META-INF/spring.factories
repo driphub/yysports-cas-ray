@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.yysports.cas.lib.autocreate.boot2.login.CasConfig
+org.springframework.boot.env.EnvironmentPostProcessor=com.yysports.cas.lib.autocreate.boot2.property.EnviroementInit  
